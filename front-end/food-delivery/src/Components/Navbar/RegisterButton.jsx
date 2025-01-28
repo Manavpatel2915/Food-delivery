@@ -1,10 +1,9 @@
 import React from "react";
 
-
 export default function RegisterButton(){
     return(
         <>
-            <button>Add Restaurant</button>
+            <button className="cursor-pointer">Add Restaurant</button>
         </>
     );
 }
