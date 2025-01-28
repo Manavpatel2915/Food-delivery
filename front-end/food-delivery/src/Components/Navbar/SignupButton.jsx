@@ -1,9 +1,8 @@
 import React from "react";
-
 export default function SignupButton(){
     return(
         <>
-            <button>Sign Up</button>
+            <button className="cursor-pointer">Signup</button>
         </>
     );
 }
