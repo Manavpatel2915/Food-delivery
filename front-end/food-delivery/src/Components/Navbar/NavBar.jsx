@@ -3,6 +3,8 @@ import NavbarbuttonGroup from "./NavbarbuttonGroup";
 import Content from "./Content";
 import logo from "../../assets/logo.jpg";
 export default function NavBar(){
+
+
     return(
     <div className="mx-auto h-[calc(100vh-15rem)] relative">
         <img src="https://b.zmtcdn.com/web_assets/81f3ff974d82520780078ba1cfbd453a1583259680.png" alt="" 
