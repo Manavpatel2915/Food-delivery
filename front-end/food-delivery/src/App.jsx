@@ -46,6 +46,10 @@ const router = createBrowserRouter(
       element:<DineOut/>
     },
     {
+      path:'pages/:id',
+      element:<></>
+    },
+    {
       path:"/drinks-and-nightlife",
       element:<DrinksAndNightlife/>
     },

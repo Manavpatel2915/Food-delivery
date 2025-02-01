@@ -7,7 +7,7 @@ import Resturants from '../Components/OrderOnline/Resturants'
 
 const OrderOnline = () => {
   return (
-    <div className=''>
+    <div>
       <MainNav />
       <Tablist />
       <Inspiration />
