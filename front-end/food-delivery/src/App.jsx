@@ -14,6 +14,7 @@ import RoofTop from './CollectionCard/RoofTop';
 import GreatCafes from './CollectionCard/GreatCafes';
 import GujaratiDelicacies from './CollectionCard/GujaratiDelicacies';
 import LocalFavourite from './CollectionCard/LocalFavourite';
+import MainNav from './Components/Navbar/MainNav';
 
 const apiCall = ()=>{
   axios.get("http:/localhost:8080")
@@ -64,7 +65,13 @@ const router = createBrowserRouter(
       path:"/roof-top",
       element:<RoofTop/>
     },
-
+    {
+      path:"index/:id",
+      element:<div>
+        <MainNav/>
+        
+      </div>
+    }
   ]
 )
 

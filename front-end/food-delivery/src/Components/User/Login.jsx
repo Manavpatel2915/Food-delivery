@@ -17,7 +17,7 @@ const Login = () => {
 
       
       <div
-        className="w-1/4 h-1/2 bg-white flex flex-col justify-center items-center rounded-lg z-[5000000] visible"
+        className="w-[80%] sm:w-[40%] h-[60%] bg-white flex flex-col justify-center items-center rounded-lg z-[5000000] visible"
         onClick={(e) => {
           e.stopPropagation();
         }}
