@@ -4,7 +4,7 @@ import Tablist from '../Components/OrderOnline/Tablist'
 const DineOut = () => {
   return (
     <div>
-      <MainNav />
+      {/* <MainNav /> */}
       <Tablist />
       this is the dine out page
     </div>

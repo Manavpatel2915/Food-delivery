@@ -15,6 +15,17 @@ import GreatCafes from './CollectionCard/GreatCafes';
 import GujaratiDelicacies from './CollectionCard/GujaratiDelicacies';
 import LocalFavourite from './CollectionCard/LocalFavourite';
 import MainNav from './Components/Navbar/MainNav';
+import Pizza from './Components/OrderOnline/ChildElement/Pizza';
+import Burger from './Components/OrderOnline/ChildElement/Burger';
+import Biryani from './Components/OrderOnline/ChildElement/Biryani';
+import Thali from './Components/OrderOnline/ChildElement/Thali';
+import Dosa from './Components/OrderOnline/ChildElement/Dosa';
+import FriedRice from './Components/OrderOnline/ChildElement/FriedRice';
+import Roll from './Components/OrderOnline/ChildElement/Roll';
+import Paneer from './Components/OrderOnline/ChildElement/Paneer';
+import VegMeals from './Components/OrderOnline/ChildElement/VegMeals';
+import Cake from './Components/OrderOnline/ChildElement/Cake';
+
 
 const apiCall = ()=>{
   axios.get("http:/localhost:8080")
@@ -39,11 +50,17 @@ const router = createBrowserRouter(
     },
     {
       path:"/order-online",
-      element:<OrderOnline/>
+      element:<div>
+        <MainNav/>
+        <OrderOnline/>
+      </div>,
     },
     {
       path:"/dine-out",
-      element:<DineOut/>
+      element:<div>
+      <MainNav/>
+      <DineOut/>
+    </div>
     },
     {
       path:'pages/:id',
@@ -75,7 +92,47 @@ const router = createBrowserRouter(
         <MainNav/>
         
       </div>
-    }
+    },
+    {
+      path:"/order-online/pizza",
+      element:<Pizza/>
+    },
+    {
+      path:"/order-online/burger",
+      element:<Burger/>
+    },
+    {
+      path:'/order-online/biryani',
+      element:<Biryani/>
+    },
+    {
+      path:'/order-online/thali',
+      element:<Thali/>
+    },
+    {
+      path:'/order-online/dosa',
+      element:<Dosa/>
+    },
+    {
+      path:'/order-online/fried-rice',
+      element:<FriedRice/>
+    },
+    {
+      path:'/order-online/roll',
+      element:<Roll/>
+    },
+    {
+      path:'/order-online/paneer',
+      element:<Paneer/>
+    },
+    {
+      path:'/order-online/veg-meals',
+      element:<VegMeals/>
+    },
+    {
+      path:'/order-online/cake',
+      element:<Cake/>
+    },
   ]
 )
 
