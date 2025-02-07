@@ -9,7 +9,7 @@ const OrderOnline = () => {
   return (
     <div>
       {/* <MainNav /> */}
-      <Tablist />
+      {/* <Tablist /> */}
       <Inspiration />
       <Topbrands/>
       <Resturants />

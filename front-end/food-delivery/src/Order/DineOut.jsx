@@ -5,7 +5,7 @@ const DineOut = () => {
   return (
     <div>
       {/* <MainNav /> */}
-      <Tablist />
+      {/* <Tablist /> */}
       this is the dine out page
     </div>
   )

@@ -25,6 +25,11 @@ import Roll from './Components/OrderOnline/ChildElement/Roll';
 import Paneer from './Components/OrderOnline/ChildElement/Paneer';
 import VegMeals from './Components/OrderOnline/ChildElement/VegMeals';
 import Cake from './Components/OrderOnline/ChildElement/Cake';
+import Tablist from './Components/OrderOnline/Tablist';
+import Inspiration from './Components/OrderOnline/Inspiration';
+import Topbrands from './Components/OrderOnline/Topbrands';
+import Resturants from './Components/OrderOnline/Resturants';
+import Food from './Components/OrderOnline/Food';
 
 
 const apiCall = ()=>{
@@ -46,22 +51,39 @@ const router = createBrowserRouter(
         <Collection />
         <Footer/>
       </div>
-
     },
+    // {
+    //   path:"/order-online",
+    //   element:<div>
+    //     <MainNav/>
+    //     <OrderOnline/>
+    //   </div>,
+    // },
     {
-      path:"/order-online",
+      path:"/food",
       element:<div>
-        <MainNav/>
-        <OrderOnline/>
+        <Food/>
       </div>,
+      children:[
+        {
+          path:'order-online',
+          element:<OrderOnline/>
+          
+        },
+        {
+          path:'dine-out',
+          element:<DineOut/>
+        }
+      ]
     },
-    {
-      path:"/dine-out",
-      element:<div>
-      <MainNav/>
-      <DineOut/>
-    </div>
-    },
+
+    // {
+    //   path:"/dine-out",
+    //   element:<div>
+    //   <MainNav/>
+    //   <DineOut/>
+    // </div>
+    // },
     {
       path:'pages/:id',
       element:<></>
