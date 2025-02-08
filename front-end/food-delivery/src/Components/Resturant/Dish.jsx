@@ -29,6 +29,7 @@ const Dish = ({title, price, rating_star ,rating_count, image}) => {
                     </div>) : (
                         <span className="font-[Gilroy-Bold]">Add</span>
                     )
+                    
                 }
             </button>
         </div>
