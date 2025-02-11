@@ -31,6 +31,9 @@ const Dish = ({title, price, rating_star ,rating_count, image}) => {
                     )
                     
                 }
+
+
+                
             </button>
         </div>
     </div>

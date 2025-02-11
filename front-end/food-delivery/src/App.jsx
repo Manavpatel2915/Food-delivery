@@ -31,6 +31,7 @@ import Topbrands from './Components/OrderOnline/Topbrands';
 import Resturants from './Components/OrderOnline/Resturants';
 import Food from './Components/OrderOnline/Food';
 import Resturant_page from './Pages/Resturant_page';
+import Admin from './Components/Admin/Admin';
 
 
 const apiCall = ()=>{
@@ -159,6 +160,13 @@ const router = createBrowserRouter(
     {
       path:'food/order-online/resturants',
       element:<Resturant_page/>
+    },
+    {
+      path:"/admin",
+      element:<div>
+        
+        <Admin/>
+      </div>
     }
   ]
 )
