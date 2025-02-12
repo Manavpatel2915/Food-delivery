@@ -22,9 +22,9 @@ const Dish = ({title, price, rating_star ,rating_count, image}) => {
             onClick={() =>!count && setCount(count + 1)}>
                 {
                     count ? (<div className="flex font-bold">
-                        <div className="w-1/3" onClick={()=>{setCount(count-1)}}><i class="fa-solid fa-minus scale-90"></i></div>
+                        <div className="w-1/3" onClick={()=>{setCount(count-1)}}><i className="fa-solid fa-minus scale-90"></i></div>
                         <div className="font-mono w-1/3">{count}</div>
-                        <div className="w-1/3" onClick={()=>{setCount(count+1)}}><i class="fa-solid fa-plus scale-90"></i></div>
+                        <div className="w-1/3" onClick={()=>{setCount(count+1)}}><i className="fa-solid fa-plus scale-90"></i></div>
 
                     </div>) : (
                         <span className="font-[Gilroy-Bold]">Add</span>

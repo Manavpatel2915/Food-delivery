@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form';
-
+import { LoginContext } from '../../contexts/loginContext';
 const LoginForm = () => {
   const {
     register,
@@ -8,26 +8,29 @@ const LoginForm = () => {
     formState: { errors,isSubmitting },
   } = useForm();
 
+  const {isOpen, setisOpen} = useContext(LoginContext);
 
   function onSubmit(data){
     console.log(data);
   }
 
   return (
-    <div>
-      <button className='ml-45 pl-2 pr-2'>x</button>
-      <h2 className='mb-2 ml-16 text-xl'>Log In</h2>
-      <form onSubmit={handleSubmit(onSubmit)}>
-        <div>
+    <div className='h-full w-full flex flex-col items-center justify-center relative'>
+      <div className='flex justify-between w-[70%] items-center'>
+        <h2 className='mb-2 text-xl text-center w-full'>Log In</h2>
+        <button className='cursor-pointer' onClick={()=>{setisOpen(false)}}>x</button>
+      </div>
+      <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center w-[70%]'>
+        <div className='w-full'>
           <label className="text-sm" htmlFor="username">Username</label>
           <br />
           <input {...register('username',{ required: true,
             minLength:{value:3,message:'Minimum length of username is 3'},
            maxLength: 10 })}
-            className="border rounded-sm" id='username'/>
+            className="border rounded-sm w-full" id='username'/>
             {errors.username && <p className='text-red-500 text-sm'>{errors.username.message}</p>}
         </div>
-        <div>
+        <div className='w-full'>
           <label className="text-sm" htmlFor="password">Password</label>
           <br />
           <input {...register('password',{ required: true,minLength: {
@@ -38,11 +41,11 @@ const LoginForm = () => {
             value: /^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[@$!%*?&])[A-Za-z\d@$!%*?&]+$/, //regex
             message:
               'Password must contain at least one letter, one number, and one special character',
-          }})} className="border rounded-sm" type="password" id='password'/>
-          {errors.password && <p className='text-red-500 text-sm'>{errors.password.message}</p>}
+          }})} className="border rounded-sm w-full" type="password" id='password'/>
+          {errors.password && <p className='text-red-500 text-sm w-[100%]'>{errors.password.message}</p>}
         </div>
         <br />
-        <input className='border border-black-100 ml-16 rounded-sm pl-2 pr-2' type='submit' 
+        <input className='border border-black-100 rounded-sm pl-2 pr-2' type='submit' 
         disabled={isSubmitting}
         value={isSubmitting?"Submitting":"Submit"}/>
       </form>
