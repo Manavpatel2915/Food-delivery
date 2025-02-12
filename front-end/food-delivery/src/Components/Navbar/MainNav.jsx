@@ -19,11 +19,11 @@ const MainNav = () => {
                 placeholder="surat"
                 className="outline-none w-[70%]"
               />
-              <i class="fa-solid fa-caret-down scale-125 w-min"></i>
+              <i className="fa-solid fa-caret-down scale-125 w-min"></i>
             </div>
             <div className="w-[2px] h-[20px] bg-orange-600"></div>
             <div className="flex items-center justify-evenly space-x-1 w-[67%]">
-              <i class="fa-solid fa-magnifying-glass scale-125"></i>
+              <i className="fa-solid fa-magnifying-glass scale-125"></i>
               <input
                 type="text"
                 className="outline-none w-full"
@@ -47,11 +47,11 @@ const MainNav = () => {
               placeholder="surat"
               className="outline-none w-[70%]"
             />
-            <i class="fa-solid fa-caret-down scale-125 w-min"></i>
+            <i className="fa-solid fa-caret-down scale-125 w-min"></i>
           </div>
           <div className="w-[2px] h-[20px] bg-orange-600"></div>
           <div className="flex items-center justify-evenly space-x-1 w-[70%]">
-            <i class="fa-solid fa-magnifying-glass scale-125"></i>
+            <i className="fa-solid fa-magnifying-glass scale-125"></i>
             <input
               type="text"
               className="outline-none w-full"

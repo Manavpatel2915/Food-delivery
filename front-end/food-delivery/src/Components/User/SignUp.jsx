@@ -1,6 +1,6 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import { useForm } from 'react-hook-form';
-
+import { LoginContext } from '../../contexts/loginContext';
 const SignUp = () => {
 
     const {
@@ -9,14 +9,19 @@ const SignUp = () => {
       formState: { errors,isSubmitting },
     } = useForm();
 
+    const {isOpen, setisOpen} = useContext(LoginContext)
+
     function onSubmit(data){
       console.log(data);
     }
 
   return (
-    <div className='h-full w-full flex flex-col items-center justify-center'>
-      <button className='ml-45 pl-2 pr-2'>x</button>
-      <h2 className='mb-2 text-xl'>Sign Up</h2>
+    <div className='h-full w-full flex flex-col items-center justify-center relative'>
+      <div className='flex w-[70%] justify-between items-center'>
+        <h2 className='mb-2 text-xl w-full text-center'>Sign Up</h2>
+        <button className='cursor-pointer' onClick={()=>{setisOpen(false)}}>x</button>
+
+      </div>
       <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center w-[70%]'>
         <div className='w-full'>
           <label className="text-sm" htmlFor="username">Username</label>

@@ -15,7 +15,7 @@ const Inspiration = ({title}) => {
 
   return (
     <div className="w-[90%] sm:w-[90%] md:w-[80%] mx-auto mt-4">
-      <h1 className="font-[Poppins] text-[1.7rem]">
+      <h1 className="font-[Poppins] text-[1.3rem] sm:text-[1.5rem] md:text-[1.7rem]">
         Inspiration for your first order
       </h1>
 
@@ -33,7 +33,7 @@ const Inspiration = ({title}) => {
 
         {/* list */}
         
-        <div className="flex mt-8 flex-nowrap overflow-x-auto space-x-8 items-center relative scroll-smooth" ref={scrollRef} style={{scrollBehavior: "smooth",scrollbarWidth: "none",msOverflowStyle: "none",scrollbarColor: "transparent transparent", scrollSnapType:'x mandatory'}}>
+        <div className="flex mt-8 flex-nowrap overflow-x-auto space-x-8 items-baseline relative scroll-smooth" ref={scrollRef} style={{scrollBehavior: "smooth",scrollbarWidth: "none",msOverflowStyle: "none",scrollbarColor: "transparent transparent", scrollSnapType:'x mandatory',whiteSpace:"nowrap"}}>
             
             <Item img={"https://b.zmtcdn.com/data/dish_images/ccb7dc2ba2b054419f805da7f05704471634886169.png"} title={'Burger'} routeval={'/order-online/burger'}/>
             <Item img={"https://b.zmtcdn.com/data/o2_assets/d0bd7c9405ac87f6aa65e31fe55800941632716575.png"} title={'Pizza'} routeval={'/order-online/pizza'}/>

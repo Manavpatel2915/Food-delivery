@@ -4,7 +4,7 @@ import { memo } from "react";
 const Tablist = () => {
   return (<>
     <div className="mt-10 w-[90%] sm:w-[90%] md:w-[80%] mx-auto">
-      <div className="flex h-auto justify-start items-center space-x-2 sm:space-x-4 ">
+      <div className="flex h-auto justify-start items-center space-x-2 sm:space-x-4">
         <Link to="/food/dine-out">
         <div className="flex justify-center items-center space-x-2 p-1 cursor-pointer border-slate-200 "> 
           <div className="rounded-full bg-slate-200 p-3 w-16 h-1w-16 flex items-center justify-center mb-2">

@@ -1,5 +1,6 @@
 import React from 'react'
 import { useForm } from 'react-hook-form';
+import { Link } from 'react-router-dom';
 
 const Admin = () => {
 
@@ -25,7 +26,7 @@ const Admin = () => {
      
         
         <div className="flex justify-end">
-        <button className="cursor-pointer">x</button>
+        <Link to={'/'}><button className="cursor-pointer">x</button></Link>
       </div>
       <h2 className="text-xl font-bold text-center mb-4">Restaurant Details</h2>
       <form onSubmit={handleSubmit(onSubmit)}>
