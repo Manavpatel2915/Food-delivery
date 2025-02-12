@@ -2,34 +2,28 @@ const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
-const ListingRestaurant = require('../back-end/models/listing');
-const MONGO_URL = "mongodb://127.0.0.1:27017/urbaneats"
+const connectDB = require('./db');
 
 
 app.use(cors());
+//body parser
+app.use(express.json());
 
-async function main(){
-    await mongoose.connect(MONGO_URL);
-}
-
-main().then(()=>{
-    console.log("connected to DB")
-}).catch((err)=>{
-    console.log(err)
-});
+//connect to database
+connectDB();
 
 
-app.get("/test",async (req,res)=>{
-    let sampletesting = new ListingRestaurant({
-        title:"pizza hut",
-        description:"Yummy pizza",
-        price:500,
-        location:"Bardoli"
-    })
+// app.get("/test",async (req,res)=>{
+//     let sampletesting = new ListingRestaurant({
+//         title:"pizza hut",
+//         description:"Yummy pizza",
+//         price:500,
+//         location:"Bardoli"
+//     })
 
-    await sampletesting.save();
-    res.send("Success");
-});
+//     await sampletesting.save();
+//     res.send("Success");
+// });
 
 //Start server
 app.listen(8080, () => {
@@ -39,5 +33,9 @@ app.listen(8080, () => {
 app.get("/",(req,res)=>{
     res.send("Hello World");
 })
+
+app.get("*", (req, res) => {
+    res.sendFile(path.resolve(__dirname, "build", "index.html"));
+  });
 
 
