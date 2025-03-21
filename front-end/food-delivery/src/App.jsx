@@ -32,15 +32,18 @@ import Resturants from './Components/OrderOnline/Resturants';
 import Food from './Components/OrderOnline/Food';
 import Resturant_page from './Pages/Resturant_page';
 import Admin from './Components/Admin/Admin';
+import { useEffect } from 'react';
+
 
 
 const apiCall = ()=>{
-  axios.get("http:/localhost:8080")
+  axios.get("http:/localhost:8080/message")
   .then((data)=>{
     console.log("API calling");
     console.log({data});
   });
 }
+apiCall();
 
 const router = createBrowserRouter(
   [

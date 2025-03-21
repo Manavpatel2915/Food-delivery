@@ -36,6 +36,10 @@ app.get("/",(req,res)=>{
     res.send("Hello World");
 })
 
+app.get('/message', (req, res) => {
+    res.json({ message: "Hello from server!" });
+});
+
 app.get("*", (req, res) => {
     res.sendFile(path.resolve(__dirname, "build", "index.html"));
   });
