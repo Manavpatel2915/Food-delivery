@@ -1,8 +1,10 @@
+
 const express = require('express');
 const app = express();
 const cors = require('cors');
 const mongoose = require('mongoose');
 const connectDB = require('./db');
+const ListingRestaurant = require('./models/listing')
 
 
 app.use(cors());
@@ -13,17 +15,17 @@ app.use(express.json());
 connectDB();
 
 
-// app.get("/test",async (req,res)=>{
-//     let sampletesting = new ListingRestaurant({
-//         title:"pizza hut",
-//         description:"Yummy pizza",
-//         price:500,
-//         location:"Bardoli"
-//     })
+app.get("/test",async (req,res)=>{
+    let sampletesting = new ListingRestaurant({
+        title:"pizza hut",
+        description:"Yummy pizza",
+        price:500,
+        location:"Bardoli"
+    })
 
-//     await sampletesting.save();
-//     res.send("Success");
-// });
+    await sampletesting.save();
+    res.send("Success");
+});
 
 //Start server
 app.listen(8080, () => {
