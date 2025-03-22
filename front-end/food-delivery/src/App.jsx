@@ -36,15 +36,6 @@ import { useEffect } from 'react';
 
 
 
-const apiCall = ()=>{
-  axios.get("http:/localhost:8080/message")
-  .then((data)=>{
-    console.log("API calling");
-    console.log({data});
-  });
-}
-apiCall();
-
 const router = createBrowserRouter(
   [
     {
@@ -176,6 +167,7 @@ const router = createBrowserRouter(
 
 export default function App() {
   const {isOpen, setisOpen} = useContext(LoginContext);
+
   return (
     <div className="App">
         {isOpen && <Login />}

@@ -2,13 +2,9 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const listingSchema = new Schema({
-    title:{
+    name:{
         type:String,
         required:true
-    },
-    description:{
-        type:String,
-        required:true,
     },
     image:{
         type:String,
@@ -19,7 +15,12 @@ const listingSchema = new Schema({
         type:Number,
         required:true,
     },
-    location:{
+    rating:{
+        type:Number,
+        min:0,
+        max:5
+    },
+    category:{
         type:String,
         required:true,
     }
